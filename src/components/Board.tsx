@@ -1,22 +1,10 @@
 const Board = ({
   task,
-  index,
-  taskList,
-  setTaskList,
+  handleOnClick,
 }: {
   task: any;
-  index: any;
-  taskList: any;
-  setTaskList: any;
+  handleOnClick: React.MouseEventHandler<HTMLButtonElement>;
 }) => {
-  const handleDelete = () => {
-    let removeIndex = taskList.indexOf(task);
-    taskList.splice(removeIndex, 1);
-    setTaskList((currentTask: any) =>
-      currentTask.filter(() => index === removeIndex)
-    );
-  };
-
   return (
     <>
       <div
@@ -25,7 +13,7 @@ const Board = ({
       >
         <p>{task}</p>
         <button
-          onClick={handleDelete}
+          onClick={handleOnClick}
           className="bg-red-500 text-white rounded-lg py-1 px-2"
         >
           Delete

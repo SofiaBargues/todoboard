@@ -15,9 +15,11 @@ function App() {
           <Board
             key={index}
             task={task}
-            index={index}
-            taskList={taskList}
-            setTaskList={setTaskList}
+            handleOnClick={() => {
+              setTaskList((currentTask: any) =>
+                currentTask.filter((val: any, idx: number) => index !== idx)
+              );
+            }}
           />
         ))}
       </div>
