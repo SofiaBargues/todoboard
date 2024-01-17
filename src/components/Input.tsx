@@ -25,11 +25,7 @@ export const Input = ({
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button
-          className="font-semibold bg-violet-400 text-white px-2 py-3.5 rounded-lg
-           hover:opacity-70"
-          onClick={hanleAddTask}
-        >
+        <button className="btn btn-secondary" onClick={hanleAddTask}>
           Add
         </button>
       </form>

@@ -7,14 +7,17 @@ const Board = ({
 }) => {
   return (
     <>
-      <div
-        className="max-w-lg rounded-xl flex flex-col items-center justify-between 
-       text-center border text-lg pt-3 pb-4 px-4"
-      >
-        <p>{task}</p>
-        <button onClick={handleOnClick} className="btn btn-primary">
-          Delete
-        </button>
+      <div className="card bg-base-100 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title">{task}</h2>
+
+          <div className="card-actions justify-end">
+            <button onClick={handleOnClick} className="btn btn-primary">
+              {" "}
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
