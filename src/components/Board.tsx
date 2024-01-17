@@ -12,10 +12,7 @@ const Board = ({
        text-center border text-lg pt-3 pb-4 px-4"
       >
         <p>{task}</p>
-        <button
-          onClick={handleOnClick}
-          className="bg-red-500 text-white rounded-lg py-1 px-2"
-        >
+        <button onClick={handleOnClick} className="btn btn-primary">
           Delete
         </button>
       </div>
