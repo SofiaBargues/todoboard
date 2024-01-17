@@ -19,7 +19,7 @@ function App() {
                 task={task}
                 handleOnClick={() => {
                   setTaskList((currentTask: any) =>
-                    currentTask.filter((val: any, idx: number) => index !== idx)
+                    currentTask.filter((_: any, idx: number) => index !== idx)
                   );
                 }}
               />
