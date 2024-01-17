@@ -13,7 +13,7 @@ const Board = ({
     let removeIndex = taskList.indexOf(task);
     taskList.splice(removeIndex, 1);
     setTaskList((currentTask: any) =>
-      currentTask.filter((todo) => index === removeIndex)
+      currentTask.filter(() => index === removeIndex)
     );
   };
 
@@ -26,7 +26,7 @@ const Board = ({
         <p>{task}</p>
         <button
           onClick={handleDelete}
-          className="bg-red-500 text-withe rounded-lg py-1 px-2k"
+          className="bg-red-500 text-white rounded-lg py-1 px-2"
         >
           Delete
         </button>
